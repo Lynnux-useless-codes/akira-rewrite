@@ -3,10 +3,11 @@
   "language": "en",
   "dictionaries": [],
   "words": [
+    "datasource",
     "LynnuxDev"
   ],
   "ignorePaths": [
-    "/CHANGELOG.md"
+    "/CHANGELOG.md",
+    ".env"
   ]
-
 }

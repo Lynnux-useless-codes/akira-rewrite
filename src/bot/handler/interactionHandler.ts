@@ -1,7 +1,8 @@
+import { ExtendedClient } from '@/types/extendedClient';
 import { Client, Interaction } from 'discord.js';
 
-export const handleInteraction = async (client: Client, interaction: Interaction) => {
-  if (!interaction.isCommand()) return;
+export const handleInteraction = async (client: ExtendedClient, interaction: Interaction) => {
+  if (!interaction.isChatInputCommand() || !interaction.inCachedGuild()) return;
 
   const command = client.commands.get(interaction.commandName);
   if (!command) {

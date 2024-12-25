@@ -5,5 +5,5 @@ export interface Command {
     name: string;
     description: string;
   };
-  execute: (interaction: ChatInputCommandInteraction) => Promise<void>;
+  execute: (interaction: ChatInputCommandInteraction<'cached'>) => Promise<void>;
 }

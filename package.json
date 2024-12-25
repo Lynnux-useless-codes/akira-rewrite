@@ -10,12 +10,14 @@
     "build": "tsc",
     "start": "node dist/bot/index.js",
     "dev": "nodemon --watch src --ext ts --exec ts-node src/bot/index.ts",
-    "test": "jest"
+    "test": "npm run build && node dist/tests/runner",
+    "db": "npx prisma format && npx prisma generate && npx prisma db push"
   },
   "keywords": [],
   "author": "LynnuxDev",
   "license": "BSD-4-Clause",
   "dependencies": {
+    "@prisma/client": "^6.1.0",
     "discord.js": "^14.16.3",
     "dotenv": "^16.4.7",
     "fs": "0.0.1-security",
@@ -38,6 +40,14 @@
   "engines": {
     "node": ">=22.0.0"
   },
+  "contributors": [
+    "user",
+    {
+      "name": "username",
+      "discord": "id",
+      "social": "url"
+    }
+  ],
   "standard-version": {
     "types": [
       {
